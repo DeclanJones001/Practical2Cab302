@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     // Static list of users, acting as a database
     private static ArrayList<User> users = new ArrayList<>();
@@ -35,6 +38,7 @@ public class Main {
         System.out.println("1. Log in");
         System.out.println("2. Sign up");
         System.out.println("3. Exit");
+        System.out.println("4. List of users");
         System.out.print("Enter your choice: ");
         // Ask for user choice
         Scanner scanner = new Scanner(System.in);
@@ -57,8 +61,11 @@ public class Main {
             case 3:
                 onExit();
                 break;
+            case 4:
+                onPrintList();
+                break;
             default:
-                System.out.println("Invalid choice!");
+                System.out.println("Invalid choice! \r");
                 showMenu();
         }
     }
@@ -90,9 +97,12 @@ public class Main {
         // TODO Later: Shows a message based on the result
     }
 
-    /**
-     * Exits the application by setting the `isRunning` flag to false.
-     */
+    public static void onPrintList() {
+        System.out.println("There is no user list ");
+    }
+        /**
+         * Exits the application by setting the `isRunning` flag to false.
+         */
     public static void onExit() {
         isRunning = false;
     }
