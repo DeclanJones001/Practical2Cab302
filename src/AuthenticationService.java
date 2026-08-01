@@ -15,7 +15,7 @@ public class AuthenticationService implements IAuthenticationService {
                 return null;
         }
 
-        User newUser = new User(username, password);
+        User newUser = new User(username + "123", password);
         users.add(newUser);
         return newUser;
     }
